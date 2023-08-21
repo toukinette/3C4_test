@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+SolutionTest/.vs/
+
+SolutionTest/ProjetTest/bin/
+
+SolutionTest/ProjetTest/obj/
