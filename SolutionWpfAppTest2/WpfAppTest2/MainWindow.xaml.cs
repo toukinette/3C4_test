@@ -23,11 +23,35 @@ namespace WpfAppTest2
         public MainWindow()
         {
             InitializeComponent();
+
+            ButtonClickMe.Click += Button_Click;
+
+            TextBlockJoeMama.Text = "It's too late";
+
+            TextBlock newTextblock =  new TextBlock();
+            newTextblock.Text = "YOU ARE ALL GONNA DIE";
+
+            StackPanelMain.Children.Add(newTextblock);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Title = "Joe mama is watching you";
+            List<Doctor> doctors =  App.Doctors;
+
+
+            string name = TextBoxName.Text;
+
+            MessageBox.Show($"Watch out {name}!", "30 seconds left", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            ButtonClickMe.Click -= Button_Click;
+            ButtonClickMe.Click += Button_ClickSecondTime;
+
+        }
+
+        private void Button_ClickSecondTime(object sender, RoutedEventArgs e)
+        {
+            
+            MessageBox.Show("Joe mama is watching you", " 30 seconds left", MessageBoxButton.OK, MessageBoxImage.Stop);
 
         }
     }

@@ -6,9 +6,18 @@
         xmlns:local="clr-namespace:WpfAppTest2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" FontSize="50">
-    <StackPanel>
-        <TextBlock FontSize="75">Allo</TextBlock>
-        <TextBlock FontSize="75">Bye</TextBlock>
-        <Button>Click me!</Button>
+    <StackPanel x:Name="StackPanelMain">
+        <WrapPanel>
+            <TextBlock Width="300">Name</TextBlock>
+            <TextBox Width="300" Background="Gray" Text="Please enter here"/>
+        </WrapPanel>
+        <TextBlock x:Name="TextBlockJoeMama">Allo</TextBlock>
+        <TextBlock>Allo</TextBlock>
+        <TextBlock>Allo</TextBlock>
+        <TextBox Background="Gray" x:Name="TextBoxName"></TextBox>
+        <!--x:Name="..." = donner un ID-->
+        <!--<Button Click="Button_Click">Click me!</Button>-->
+        <Button x:Name="ButtonClickMe">Click me!</Button>
     </StackPanel>
+
 </Window>
