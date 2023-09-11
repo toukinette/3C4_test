@@ -1,0 +1,32 @@
+﻿<Window x:Class="cours04.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cours04"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        FontSize="30">
+    
+    <StackPanel>
+        <ComboBox x:Name="ComboBoxGroups">
+
+        </ComboBox>
+        <CheckBox x:Name="checkBoxTest" Checked="CheckBox_Checked">Test</CheckBox> <!--check box-->
+        <ToggleButton>Test</ToggleButton> <!--actif/inactif-->
+        
+        <!--Faire des x:Name pour les RadioButton si on veux les traiter-->
+        <RadioButton x:Name="RadioBtnCoke" GroupName ="Drink"
+                     Checked="RadioBtnCoke_Checked">Coke</RadioButton> <!--exclusion entre les choix-->
+        <RadioButton x:Name="RadioBtn7up" GroupName ="Drink"
+                     Checked="RadioBtn7up_Checked">7up</RadioButton>
+        <RadioButton x:Name="RadioBtnCanadaDry" GroupName ="Drink"
+                     Checked="RadioBtnCanadaDry_Checked">Canada Dry</RadioButton>
+        
+        <RadioButton GroupName ="Food">Pizza</RadioButton>
+        <RadioButton GroupName ="Food">Sandwich</RadioButton>
+        <RadioButton GroupName ="Food">Spaghetti</RadioButton>
+
+
+    </StackPanel>
+</Window>
